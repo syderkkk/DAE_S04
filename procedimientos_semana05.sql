@@ -11,12 +11,10 @@ END
 GO
 
 CREATE OR ALTER PROC USP_ListarCategorias
-    @NombreCategoria VARCHAR(50) = ''
 AS
 BEGIN
     SELECT idcategoria, nombrecategoria, descripcion, Activo, CodCategoria
     FROM categorias
-    WHERE nombrecategoria LIKE '%' + @NombreCategoria + '%'
 END
 GO
 
