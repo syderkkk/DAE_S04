@@ -1,0 +1,29 @@
+<Window x:Class="Semana05.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Semana05"
+        mc:Ignorable="d"
+        Title="Semana05 - Neptuno" Height="500" Width="900">
+    <TabControl>
+        <TabItem Header="Productos (punto 3)">
+            <DataGrid x:Name="dgProductos" AutoGenerateColumns="True" IsReadOnly="True" />
+        </TabItem>
+        <TabItem Header="Categorías (punto 4)">
+            <DataGrid x:Name="dgCategorias" AutoGenerateColumns="True" IsReadOnly="True" />
+        </TabItem>
+        <TabItem Header="Proveedores (punto 6)">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="8">
+                    <TextBlock Text="Contacto:" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                    <TextBox x:Name="txtContacto" Width="150" Margin="0,0,12,0"/>
+                    <TextBlock Text="Ciudad:" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                    <TextBox x:Name="txtCiudad" Width="150" Margin="0,0,12,0"/>
+                    <Button x:Name="btnBuscar" Content="Buscar" Click="btnBuscar_Click" Padding="8,2"/>
+                </StackPanel>
+                <DataGrid x:Name="dgProveedores" AutoGenerateColumns="True" IsReadOnly="True" />
+            </DockPanel>
+        </TabItem>
+    </TabControl>
+</Window>
